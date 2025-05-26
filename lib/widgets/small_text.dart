@@ -1,3 +1,6 @@
+/*
+* Reusable small text assets
+* */
 import 'package:flutter/cupertino.dart';
 
 class SmallText extends StatelessWidget {

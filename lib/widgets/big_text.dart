@@ -1,4 +1,9 @@
+/*
+* Reusable big text assets
+* */
+
 import 'package:flutter/cupertino.dart';
+import 'package:projects/utils/dimensions.dart';
 
 class BigText extends StatelessWidget {
   Color? color;
@@ -6,7 +11,7 @@ class BigText extends StatelessWidget {
   double size;
   TextOverflow overFlow;
 
-  BigText({super.key, this.color = const Color(0xFF332d2b), required this.text, this.size = 20,
+  BigText({super.key, this.color = const Color(0xFF332d2b), required this.text, this.size = 0,
     this.overFlow = TextOverflow.ellipsis});
 
   @override
@@ -15,7 +20,7 @@ class BigText extends StatelessWidget {
       text, maxLines : 1, overflow: overFlow, style: TextStyle(
       fontFamily: 'Roboto',
       color: color,
-      fontSize: size,
+      fontSize: size == 0 ? Dimensions.font20 : size,
       fontWeight: FontWeight.w400
     ),
     );
